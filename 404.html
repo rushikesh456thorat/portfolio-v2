@@ -1,48 +1,64 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Single Page Apps for GitHub Pages</title>
-  <script type="text/javascript">
-    // Single Page Apps for GitHub Pages
-    // MIT License
-    // https://github.com/rafgraph/spa-github-pages
-    // This script takes the current url and converts the path and query
-    // string into just a query string, and then redirects the browser
-    // to the new url with the query string and a hash fragment,
-    // e.g. /foo/bar?a=b&c=d becomes /?p=/foo/bar&a=b&c=d#qwe
-    // This is a workaround for the fact that GitHub Pages doesn't
-    // support server-side routing.
-    // For more details, see https://github.com/rafgraph/spa-github-pages#how-it-works
-    (function(){
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect != location.href) {
-        history.replaceState(null, null, redirect);
-      }
-    })();
-  </script>
-  <script type="text/javascript">
-    // If you're using a custom domain (like rushikeshthorat.dev), this is simpler.
-    // If you're using a project page (like username.github.io/repo-name/),
-    // you might need to adjust 'pathSegmentsToKeep' below.
-    // For custom domains, 'pathSegmentsToKeep' should be 0.
-    // For project pages, it's typically 1 (to keep '/repo-name').
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    var pathSegmentsToKeep = 0; // Set to 0 for custom domains (like rushikeshthorat.dev)
-                                // Set to 1 for project pages (like username.github.io/repo-name/)
+    <title>Rushikesh Thorat — Full Stack Developer Portfolio</title>
+    <meta name="title" content="Rushikesh Thorat — Full Stack Developer Portfolio" />
+    <meta name="description" content="Rushikesh Thorat is an AI Engineer and Full Stack Developer building smart, scalable web solutions. Explore my projects in AI, LLMs, full-stack development, automation, and open-source contributions." />
+    <meta name="keywords" content="Rushikesh Thorat, AI engineer, full stack developer, portfolio, LLM, React, Node.js, MongoDB, Python, OpenAI, web developer, MLOps, product builder" />
+    <meta name="author" content="Rushikesh Thorat" />
+    <link rel="canonical" href="https://rushikeshthorat.dev/" />
 
-    var l = window.location;
-    l.replace(
-      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=' +
-      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-      (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-      l.hash
-    );
-  </script>
-</head>
-<body>
-  <p>If you are not redirected automatically, follow this <a href="/">link to the homepage</a>.</p>
-</body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rushikeshthorat.dev/" />
+    <meta property="og:title" content="Rushikesh Thorat — Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Rushikesh Thorat is an AI Engineer and Full Stack Developer building smart, scalable web solutions. Explore my projects in AI, LLMs, full-stack development, automation, and open-source contributions." />
+    <meta property="og:image" content="https://rushikeshthorat.dev/preview.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rushikeshthorat.dev/" />
+    <meta property="twitter:title" content="Rushikesh Thorat — Full Stack Developer Portfolio" />
+    <meta property="twitter:description" content="Rushikesh Thorat is an AI Engineer and Full Stack Developer building smart, scalable web solutions. Explore my projects in AI, LLMs, full-stack development, automation, and open-source contributions." />
+    <meta property="twitter:image" content="https://rushikeshthorat.dev/preview.png" />
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rushikesh Thorat",
+      "url": "https://rushikeshthorat.dev/",
+      "image": "https://rushikeshthorat.dev/me.webp",
+      "sameAs": [
+        "https://github.com/rushikesh456thorat",
+        "https://www.linkedin.com/in/rushikesh-thorat-dev"
+      ],
+      "jobTitle": "Full Stack Developer",
+      "alumniOf": "Shivaji University",
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Machine Learning",
+        "LLMs",
+        "Cybersecurity",
+        "Web Development",
+        "Full Stack Development",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Python"
+      ]
+    }
+    </script>
+    <script type="module" crossorigin src="/assets/index-CAhldT7M.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B58uRR33.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
