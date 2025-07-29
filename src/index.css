@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "./typography.js";
+
+/* index.css or App.css */
+@font-face {
+  font-family: "LastOfUs"; /* Give your font a name */
+  src: 
+    url("../src/assets/font/The\ Last\ Of\ Us\ Extreme.ttf") format("truetype");
+  font-weight: normal; /* Adjust based on your font's weight */
+  font-style: normal; /* Adjust based on your font's style */
+}
+
+.font-lastOfUs{
+    font-family: LastOfUs;
+    font-size: 150px;
+}
+body{
+   overflow-x: hidden !important;
+}

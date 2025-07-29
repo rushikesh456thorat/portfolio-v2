@@ -1,0 +1,124 @@
+/* App.css */
+.corner-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200vw;
+  height: 200vh;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0) 70%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0) 70%
+    );
+  background-blend-mode: lighten;
+}
+.hero-font {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+@keyframes randomMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(30vw, 10vh);
+  }
+  50% {
+    transform: translate(10vw, 30vh);
+  }
+  75% {
+    transform: translate(-20vw, 15vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fadeColor {
+  0% {
+    color: var(--initial-color);
+  }
+  10% {
+    color: var(--fade-color);
+  }
+  40% {
+    color: var(--initial-color);
+  }
+  100% {
+    color: var(--initial-color);
+  }
+}
+
+.animate-build {
+  --fade-color: rgb(155, 107, 240);
+  animation: fadeColor 9s infinite ease-in-out;
+  animation-delay: 0s;
+}
+
+.animate-troubleshoot {
+  --fade-color: #00a67d;
+  animation: fadeColor 9s infinite ease-in-out;
+  animation-delay: 3s;
+}
+
+.animate-evolve {
+  --fade-color: #d1b894;
+  animation: fadeColor 9s infinite ease-in-out;
+  animation-delay: 6s;
+}
+
+body {
+  --initial-color: black;
+ overflow-x: hidden;
+}
+
+
+.dark body {
+  --initial-color: #bebebe;
+}
+
+@keyframes marquee-track {
+  0% {
+    transform: translateX(0%);
+  }
+  
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-track {
+  animation: marquee-track 50s linear infinite;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px #4b5563; /* Tailwind gray-600 */
+}
+
+.dark .stroke-text-dark {
+  -webkit-text-stroke: 1px #9ca3af; /* Tailwind gray-400 */
+}
+
+.markdown h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.markdown strong {
+  font-weight: bold;
+}
+.markdown em {
+  font-style: italic;
+}
+
+
+
+
