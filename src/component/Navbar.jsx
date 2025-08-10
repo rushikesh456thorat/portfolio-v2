@@ -61,7 +61,7 @@ const Navbar = () => {
           <Link to="/about" onClick={closeMenu} className="flex items-center gap-2">
             <Info size={22} /> About
           </Link>
-          <Link to="/blogs" onClick={closeMenu} className="flex items-center gap-2">
+          <Link to="/blog" onClick={closeMenu} className="flex items-center gap-2">
             <BookOpen size={22} /> Blogs
           </Link>
           <Link to="/projects" onClick={closeMenu} className="flex items-center gap-2">

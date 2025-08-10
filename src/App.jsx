@@ -8,6 +8,7 @@ import Projects from './pages/Projects'
 import ProjectPage from './pages/ProjectPage.jsx'
 import { useEffect, useState } from 'react'
 import OfflinePage from './pages/Offline.jsx'
+import BlogPage from './pages/BlogPage.jsx'
 
 function App() {
   const [isOnline, setIsOnline] = useState(navigator.onLine);
@@ -34,6 +35,7 @@ function App() {
           <Route path='/' element={<HomePage/> }/>
           <Route path='/about' element={<About/> }/>
           <Route path='/blog' element={<Blog/> }/>
+          <Route path='/blog/:slug' element={<BlogPage/> }/>
           <Route path='/project/:projectId' element={<ProjectPage/>}/>
            <Route path='/projects' element={<Projects/> }/>
           <Route path='*' element={<NotFound/>}/>

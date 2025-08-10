@@ -3,12 +3,19 @@ import Navbar from '../component/Navbar.jsx';
 import Footer from '../component/Footer.jsx';
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { LayoutGrid, CalendarDays, Clock } from "lucide-react";
+import { blogPosts } from "../blogs/BlogPosts.js";
+import { useNavigate } from 'react-router-dom';
 
 
 const Blog = () => {
  
-  const allBlogs = Object.values({});
+  const allBlogs = Object.values(blogPosts);
   const currentBlogs = allBlogs; 
+  const navigate = useNavigate();
+  const handleOpenBlog = (slug) =>{
+    navigate('/blog/'+slug)
+    
+  }
 
   return (
     <>
@@ -41,11 +48,12 @@ const Blog = () => {
           {currentBlogs.length > 0 ? (
             currentBlogs.map((blog) => (
               <div
-                key={blog.title} // Assuming title is unique, or add an 'id' to your blog objects
-                className="flex flex-col md:flex-row gap-6 border border-gray-300 dark:border-gray-700 rounded-xl shadow-md bg-white dark:bg-black p-4 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                key={blog.title} 
+                className="flex flex-col md:flex-row gap-6 hover:cursor-pointer border border-gray-300 dark:border-gray-700 rounded-xl shadow-md bg-white dark:bg-black p-4 hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                onClick={()=>{handleOpenBlog(blog.slug)}}
               >
                 <img
-                  src={blog.image}
+                  src={blog.heroImage}
                   alt={blog.title}
                   className="w-full md:w-[260px] h-[200px] md:h-[160px] object-cover rounded-lg flex-shrink-0"
                 />
@@ -55,8 +63,8 @@ const Blog = () => {
                       {blog.title}
                     </h2>
                     <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm sm:text-base">
-                      {/* Accessing the description from the first section's content array or a top-level 'description' */}
-                      {blog.description || (blog.sections && blog.sections.length > 0 && blog.sections[0].content && blog.sections[0].content.join(' '))}
+                      
+                      {blog.excerpt || (blog.sections && blog.sections.length > 0 && blog.sections[0].content && blog.sections[0].content.join(' '))}
                     </p>
                   </div>
                   <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm mt-4 text-gray-600 dark:text-gray-400 items-center">
