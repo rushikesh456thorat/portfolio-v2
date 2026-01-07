@@ -7,7 +7,8 @@ const HeroSection = () => {
     <>
       <section
         id="hero-section"
-        className="relative flex flex-col px-4 sm:px-20 overflow-hidden  dark:text-[#bebebe]"
+        // Removed 'overflow-hidden' so the background ball can float into the next section
+        className="relative flex flex-col px-4 sm:px-20 dark:text-[#bebebe]"
       >
         <div
           className="absolute z-0 pointer-events-none blur-3xl rounded-full dark:opacity-10"
@@ -110,8 +111,6 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 };
